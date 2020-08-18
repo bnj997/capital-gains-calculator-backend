@@ -1,5 +1,6 @@
 const HttpError = require('../models/http-error');
 const Stock = require('../models/stock');
+const mongoose = require('mongoose');
 
 const getAllStocks = async (req, res, next) => {
   let stocks;
