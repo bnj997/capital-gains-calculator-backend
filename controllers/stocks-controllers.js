@@ -17,9 +17,9 @@ const getAllStocks = async (req, res, next) => {
 
 
 const addNewStock = async (req, res, next) => {
-  const {stock} = req.body;
+  const {_id} = req.body;
   const createdStock = new Stock({
-    stock,
+    _id,
     transactions: []
   });
   try {

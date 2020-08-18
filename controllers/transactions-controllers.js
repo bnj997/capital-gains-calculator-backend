@@ -15,7 +15,7 @@ const getTransactionsForStock = async (req, res, next) => {
     );
     return next(error);
   }
-  if (!stockWithTransactions || stockWithTransactions.transactions.length === 0) {
+  if (!stockWithTransactions) {
     return next(
       new HttpError('Could not find transactions for the provided stock id.', 404)
     );
